@@ -1,4 +1,4 @@
-
+import close from "../../assets/icons/close.svg";
 export const subERR = () => {
   return `
   <section class='subsubmodal' id='RRsubE'>
@@ -15,8 +15,8 @@ export const subERR = () => {
       </ol>
     </div>
     <a href="#" class='close_modalERR'>
-      <img src="/assets/icons/close.svg" class='close_icon' alt="icono x" />
+      <img src=${close} class='close_icon' alt="icono x" />
     </a>
   </section>
   `;
-}
+};

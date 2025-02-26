@@ -1,4 +1,4 @@
-
+import close from "../../assets/icons/close.svg";
 export const subDRF = () => {
   return `
   <section class='submodal' id='RFsubD'>
@@ -19,8 +19,8 @@ export const subDRF = () => {
       </ol>
     </div>
     <a href="#" class='close_modalDRF'>
-      <img src="/assets/icons/close.svg" class='close_icon' alt="icono x" />
+      <img src=${close} class='close_icon' alt="icono x" />
     </a>
   </section>
   `;
-}
+};

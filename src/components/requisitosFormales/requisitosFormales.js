@@ -1,3 +1,4 @@
+import close from "../../assets/icons/close.svg";
 export const requisitosFormales = () => {
   return `
     <section class='modal' id='requisitosFormales'>
@@ -27,11 +28,11 @@ export const requisitosFormales = () => {
       </ol>
       </div>
       <a href="#" class='close_modal' id='close_modalRF'>
-        <img src="/assets/icons/close.svg" class='close_icon' alt="icono x" />
+        <img src=${close} class='close_icon' alt="icono x" />
       </a>
     </section>
   `;
-}
+};
 
 //primer submodal
 document.addEventListener("DOMContentLoaded", () => {
@@ -51,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     modalSubDRF.classList.remove("modal_show");
     closeModalRF.classList.remove("ocultar");
   });
-}); 
+});
 
 //segundo submodal
 document.addEventListener("DOMContentLoaded", () => {

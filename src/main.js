@@ -1,23 +1,24 @@
-// import javascriptLogo from './javascript.svg'
-// import viteLogo from '/vite.svg'
 import { queEs, RequisitosTermino, requisitosFormales, requisitosRegistro } from './components/index';
 import { sub2 } from './components/queEs/sub2';
 import { sub2RR, subCRR, subERR } from './components/requisitosRegistro/index';
 import { subDRF, subKRF } from './components/requisitosFormales';
-
+import EdificioDerecho from "./assets/images/FotoPrincipal.jpg";
+import EdificioDerechoBlur from "./assets/images/Foto_Blur.jpg";
+import Logos from "./assets/logos/Logos.svg";
+import Libros from "./assets/icons/Libros.svg";
 import './style.css'
 
 
 document.querySelector("#app").innerHTML = `
   <main id='main'>
-    <img class="logoUnam" src="/assets/logos/Logos.svg" alt="logo unam" />
+    <img class="logoUnam" src=${Logos} alt="logo unam" />
     <h1 class="title">TITULACIÓN POR TESIS</h1>
     <h2 class="subtitle">SEMINARIO DE DERECHO AMBIENTAL</h2>
     <div alt='contenedor imagen edificio derecho' class='image_container'>
-      <img src="/assets/images/FotoPrincipal.jpg" alt="facultad de derecho" />
+      <img src=${EdificioDerecho} alt="facultad de derecho" />
     </div>
     <div alt='contenedor imagen edificio derecho detras' class='imageSecond_container'>
-      <img src="/assets/images/Foto_Blur.jpg" alt="facultad de derecho detras" />
+      <img src=${EdificioDerechoBlur} alt="facultad de derecho detras" />
     </div>
     <button class='btn-qe' id='onQueEs'>¿QUÉ ES?</button>
     ${queEs()}
@@ -34,7 +35,7 @@ document.querySelector("#app").innerHTML = `
     ${subKRF()}
     <button class='btn-rt' id='onRT'>REQUISITO PARA EL TÉRMINO DE LA TESIS</button>
     ${RequisitosTermino()}
-    <img class='books_image' src="/assets/icons/Libros.svg" alt="imagen libros" />
+    <img class='books_image' src=${Libros} alt="imagen libros" />
   </main>
 `;
 

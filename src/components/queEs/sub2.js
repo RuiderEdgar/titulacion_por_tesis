@@ -1,4 +1,5 @@
-import '../submodals.css'
+import close from "../../assets/icons/close.svg";
+import "../submodals.css";
 export const sub2 = () => {
   return `
   <section class='submodal' id='QEsub2'>
@@ -11,8 +12,8 @@ export const sub2 = () => {
         </ol>
     </div>
     <a href="#" class='close_modalQE'>
-      <img src="/assets/icons/close.svg" class='close_icon' alt="icono x" />
+      <img src=${close} class='close_icon' alt="icono x" />
     </a>
   </section>
   `;
-}
+};

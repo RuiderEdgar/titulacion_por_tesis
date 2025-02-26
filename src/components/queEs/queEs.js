@@ -1,3 +1,4 @@
+import close from '../../assets/icons/close.svg'
 import '../dialogs.css'
 export const queEs = () => {
   return `
@@ -14,7 +15,7 @@ export const queEs = () => {
       </ol>
     </div>
     <a href="#" class='close_modal' id='close_modal_QE'>
-      <img src="/assets/icons/close.svg" class='close_icon' alt="icono x" />
+      <img src=${close} class='close_icon' alt="icono x" />
     </a>
   </section>
   `;

@@ -1,3 +1,4 @@
+import close from "../../assets/icons/close.svg";
 import "../submodals.css";
 export const sub2RR = () => {
   return `
@@ -31,7 +32,7 @@ export const sub2RR = () => {
       </ol>
     </div>
     <a href="#" class='close_modalRR' id='close_modal_2RR'>
-      <img src="/assets/icons/close.svg" class='close_icon' alt="icono x" />
+      <img src=${close} class='close_icon' alt="icono x" />
     </a>
   </section>
   `;
