@@ -277,6 +277,11 @@ button {
 }
 
 @media (min-width: 425px) and (max-width: 767px) {
+  .modal {
+    .modal_container {
+      padding: 2rem 3.6rem;
+    }
+  }
   main {
     max-width: 767px;
     max-height: 1024px;
@@ -416,6 +421,11 @@ button {
   .close_icon {
     width: 6rem;
   }
+  .modal {
+    .modal_container {
+      padding: 2rem 4.5rem;
+    }
+  }
 }
 
 @media (min-width: 769px) and (max-width: 870px) {
@@ -435,6 +445,11 @@ button {
 }
 
 @media (min-width: 1025px) {
+  .modal {
+    .modal_container {
+      padding: 2rem 6rem;
+    }
+  }
   body {
     display: flex;
     justify-content: center;
