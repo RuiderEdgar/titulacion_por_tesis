@@ -1,8 +1,11 @@
 .submodal {
   background: rgba(0, 0, 0, 0.4);
   position: fixed;
-  top: 0;
-  left: 0;
+  width: 100vw;
+  max-width: 1440px;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
   right: 0;
   bottom: 0;
   overflow: visible;
@@ -12,14 +15,23 @@
   z-index: 7;
   --transform: translate(-290vh);
   --transition: transform 0.8s;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
   .submodal_container {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
     margin: auto;
-    min-width: 32rem;
-    min-height: 32rem;
+    min-width: 24rem;
+    min-height: 26rem;
     width: min(80vw, 80vh);
     height: min(80vw, 80vh);
+    height: fit-content;
+    max-height: 28rem;
     text-align: justify;
-    padding: 2rem 7rem 2rem 8rem;
+    padding: 1rem 3rem;
     overflow-y: auto;
     position: fixed;
     top: 50%;
@@ -28,24 +40,46 @@
     word-break: break-word;
     background-color: var(--azul);
     color: white;
-    clip-path: circle(50%);
     z-index: 8;
     transform: var(--transform);
     transition: var(--transition);
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+  }
+  .submodal_container ::-webkit-scrollbar {
+    width: 6px;
+  }
+  .submodal_container ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .submodal_container ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+  }
+  .submodal_container ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.8);
+  }
+  .submodal_container ::-webkit-scrollbar-button {
+    display: none;
   }
 }
 
 .close_modalQE,
 .close_modalRR,
 .close_modalCRR,
-.close_modalERR {
+.close_modalERR,
+.close_modalDRF,
+.close_modalKRF {
   cursor: pointer;
   position: fixed;
   border-radius: 50%;
   top: 0;
-  left: 68%;
+  left: 75%;
   right: 0;
-  bottom: 40%;
+  bottom: 45%;
   height: fit-content;
   width: fit-content;
   z-index: 100;
@@ -69,8 +103,11 @@
 .subsubmodal {
   background: rgba(0, 0, 0, 0.4);
   position: fixed;
-  top: 0;
-  left: 0;
+  width: 100vw;
+  max-width: 1440px;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
   right: 0;
   bottom: 0;
   overflow: visible;
@@ -80,14 +117,24 @@
   z-index: 9;
   --transform: translate(-290vh);
   --transition: transform 0.8s;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+
   .subsubmodal_container {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
     margin: auto;
-    min-width: 32rem;
-    min-height: 32rem;
+    min-width: 24rem;
+    min-height: 26rem;
     width: min(80vw, 80vh);
-    height: min(80vw, 80vh);
+    /* height: min(80vw, 80vh); */
+    height: fit-content;
+    max-height: 28rem;
     text-align: justify;
-    padding: 2rem 7rem 2rem 8rem;
+    padding: 2rem 3rem;
     overflow-y: auto;
     position: fixed;
     top: 50%;
@@ -96,9 +143,29 @@
     word-break: break-word;
     background-color: var(--dorado);
     color: white;
-    clip-path: circle(50%);
     z-index: 10;
     transform: var(--transform);
     transition: var(--transition);
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+  }
+  .subsubmodal_container ::-webkit-scrollbar {
+    width: 6px;
+  }
+  .subsubmodal_container ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .subsubmodal_container ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+  }
+  .subsubmodal_container ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.8);
+  }
+  .subsubmodal_container ::-webkit-scrollbar-button {
+    display: none;
   }
 }

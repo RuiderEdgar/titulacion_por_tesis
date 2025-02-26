@@ -6,7 +6,7 @@
   h1 {
     text-align: center;
     font-size: 1.8rem;
-    max-width: 30rem;
+    /* max-width: 30rem; */
   }
 }
 
@@ -16,6 +16,7 @@ li {
 
 .information {
   font-size: 1.2rem;
+  padding-left: 1rem;
 }
 .blockquote {
   padding-left: 2rem;
@@ -42,7 +43,7 @@ li {
   }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .titleContainer {
     h1 {
       text-align: center;

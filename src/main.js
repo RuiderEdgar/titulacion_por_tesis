@@ -3,6 +3,7 @@
 import { queEs, RequisitosTermino, requisitosFormales, requisitosRegistro } from './components/index';
 import { sub2 } from './components/queEs/sub2';
 import { sub2RR, subCRR, subERR } from './components/requisitosRegistro/index';
+import { subDRF, subKRF } from './components/requisitosFormales';
 
 import './style.css'
 
@@ -29,6 +30,8 @@ document.querySelector("#app").innerHTML = `
     ${subERR()}
     <button class='btn-rf' id='onRF'>REQUISITOS FORMALES</button>
     ${requisitosFormales()}
+    ${subDRF()}
+    ${subKRF()}
     <button class='btn-rt' id='onRT'>REQUISITO PARA EL TÉRMINO DE LA TESIS</button>
     ${RequisitosTermino()}
     <img class='books_image' src="/assets/icons/Libros.svg" alt="imagen libros" />

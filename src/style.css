@@ -60,7 +60,7 @@ a {
 }
 
 .subtitle {
-  width: 53%;
+  width: 54%;
   max-width: 17rem;
   font-size: 1.5rem;
   margin: 1rem 0;
@@ -169,8 +169,11 @@ button {
 .modal {
   background: rgba(0, 0, 0, 0.4);
   position: fixed;
-  top: 0;
-  left: 0;
+  width: 100vw;
+  max-width: 1440px;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
   right: 0;
   bottom: 0;
   overflow: visible;
@@ -180,14 +183,24 @@ button {
   z-index: 5;
   --transform: translate(-290vh);
   --transition: transform 0.8s;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+
   .modal_container {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
     margin: auto;
-    min-width: 32rem;
-    min-height: 32rem;
+    min-width: 24rem;
+    min-height: 26rem;
     width: min(80vw, 80vh);
-    height: min(80vw, 80vh);
+    /* height: min(80vw, 80vh); */
+    height: fit-content;
+    max-height: 28rem;
     text-align: justify;
-    padding: 3rem 5rem 4rem 5.6rem;
+    padding: 2rem 3rem;
     overflow-y: auto;
     position: fixed;
     top: 50%;
@@ -196,10 +209,34 @@ button {
     word-break: break-word;
     background-color: var(--amarillo);
     color: black;
-    clip-path: circle(50% at center);
     z-index: 6;
     transform: var(--transform);
     transition: var(--transition);
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+  }
+  .modal_container ::-webkit-scrollbar {
+    width: 6px;
+  }
+  .modal_container ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .modal_container ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+  }
+  .modal_container ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.8);
+  }
+  .modal_container ::-webkit-scrollbar-button {
+    display: none;
   }
 }
 
@@ -220,7 +257,7 @@ button {
   position: fixed;
   border-radius: 50%;
   top: 0;
-  left: 68%;
+  left: 80%;
   right: 0;
   bottom: 40%;
   height: fit-content;
@@ -256,7 +293,7 @@ button {
   }
 
   .subtitle {
-    width: 55%;
+    width: 56%;
     font-size: 2rem;
     max-width: 33rem;
     margin: 1rem 0;
@@ -297,30 +334,18 @@ button {
     max-width: 41rem;
   }
 }
-@media (min-width: 425px) and (max-width: 585px) {
-  .modal {
-    .modal_container {
-      padding: 4rem 7rem 4rem 8rem;
-    }
-  }
-}
 
 @media (min-width: 585px) and (max-width: 767px) {
   .close_modal {
     left: 80%;
-    bottom: 48%;
+    bottom: 40%;
     box-shadow: 0 0 15px rgba(213, 159, 15, 0.9);
   }
   .close_icon {
     width: 4rem;
   }
-  .modal {
-    .modal_container {
-      padding: 4rem 9rem 8rem 10.5rem;
-    }
-  }
 }
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   main {
     max-width: 1024px;
     max-height: 932px;
@@ -384,8 +409,8 @@ button {
     width: 30vw;
   }
   .close_modal {
-    left: 60%;
-    bottom: 70%;
+    left: 80%;
+    bottom: 40%;
     box-shadow: 0 0 15px rgba(213, 159, 15, 0.9);
   }
   .close_icon {
@@ -394,31 +419,16 @@ button {
 }
 
 @media (min-width: 769px) and (max-width: 870px) {
-  .modal {
-    .modal_container {
-      padding: 4rem 12rem 8rem 13rem;
-    }
-  }
   button {
     margin: 2.5rem 20rem 2.5rem 0;
   }
 }
 @media (min-width: 871px) and (max-width: 975px) {
-  .modal {
-    .modal_container {
-      padding: 4rem 14rem 8rem 16rem;
-    }
-  }
   button {
     margin: 2.5rem 35rem 2.5rem 0;
   }
 }
 @media (min-width: 976px) and (max-width: 1024px) {
-  .modal {
-    .modal_container {
-      padding: 4rem 16rem 8rem 18rem;
-    }
-  }
   .subtitle {
     margin-bottom: 14rem;
   }
@@ -455,7 +465,6 @@ button {
   button {
     align-self: center;
     text-align: left;
-    /* margin: 2.5rem 35rem 2.5rem 0; */
     font-size: 2.6rem;
     padding: 1rem 2rem;
     border-radius: 30px;
@@ -497,15 +506,9 @@ button {
     max-width: 42rem;
     max-height: 40rem;
   }
-
-  .modal {
-    .modal_container {
-      padding: 5rem 16rem 8rem 18rem;
-    }
-  }
   .close_modal {
-    left: 60%;
-    bottom: 70%;
+    left: clamp(60%, 80%, calc(50% + 300px));
+    bottom: 40%;
     box-shadow: 0 0 15px rgba(213, 159, 15, 0.9);
   }
   .close_icon {
