@@ -1,8 +1,10 @@
 // import javascriptLogo from './javascript.svg'
 // import viteLogo from '/vite.svg'
 import { queEs, RequisitosTermino, requisitosFormales, requisitosRegistro } from './components/index';
-import './style.css'
+import { sub2 } from './components/queEs/sub2';
+import { sub2RR, subCRR, subERR } from './components/requisitosRegistro/index';
 
+import './style.css'
 
 
 document.querySelector("#app").innerHTML = `
@@ -18,8 +20,13 @@ document.querySelector("#app").innerHTML = `
     </div>
     <button class='btn-qe' id='onQueEs'>¿QUÉ ES?</button>
     ${queEs()}
+    ${sub2()}
+    
     <button class='btn-rr' id='onRR'>REQUISITO PARA REGISTRO DE TEMA DE TESIS</button>
     ${requisitosRegistro()}
+    ${sub2RR()}
+    ${subCRR()}
+    ${subERR()}
     <button class='btn-rf' id='onRF'>REQUISITOS FORMALES</button>
     ${requisitosFormales()}
     <button class='btn-rt' id='onRT'>REQUISITO PARA EL TÉRMINO DE LA TESIS</button>
@@ -29,10 +36,9 @@ document.querySelector("#app").innerHTML = `
 `;
 
 //primer modal
-
 const openModalQE = document.querySelector("#onQueEs");
 const modalQE = document.querySelector("#queEs");
-var closeModals = document.querySelectorAll(".close_modal");
+const closeModals = document.querySelectorAll(".close_modal");
 
 //cerrar todos los modals
 closeModals.forEach((closeModal) => {
@@ -50,7 +56,6 @@ openModalQE.addEventListener("click", (e) => {
   e.preventDefault();
   modalQE.classList.add("modal_show");
 });
-
 
 //segundo modal
 const openModalRR = document.querySelector("#onRR");

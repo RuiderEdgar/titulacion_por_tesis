@@ -197,7 +197,7 @@ button {
     background-color: var(--amarillo);
     color: black;
     clip-path: circle(50% at center);
-    z-index: 100;
+    z-index: 6;
     transform: var(--transform);
     transition: var(--transition);
   }
