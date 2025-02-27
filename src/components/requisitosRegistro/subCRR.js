@@ -15,7 +15,7 @@ export const subCRR = () => {
         </li>
         <li>
           <strong>Educación a Distancia</strong> en el enlace 
-          <a target='_blank' href="https://docs.google.com/forms/d/e/1FAIpQLSfnfUlBuSP3oBlJkhbpAfwiVpITCMU7EZNnOPF2k9JvKAd6Gw/closedform     ">https://docs.google.com/forms/d/e/1FAIpQLSfnfUlBuSP3oBlJkhbpAfwiVpITCMU7EZNnOPF2k9JvKAd6Gw/closedform</a> de la sección escolar de la SUAyED ambos en un horario de 9:00 a 14:00 horas. Sí continúas inscrito o inscrita deberás presentar la tira de materias validada y descargada del Sistema Integral de Administración Escolar (SIAE).
+          <a target='_blank' href="https://docs.google.com/forms/d/e/1FAIpQLSfnfUlBuSP3oBlJkhbpAfwiVpITCMU7EZNnOPF2k9JvKAd6Gw/closedform     ">https://docs.google.com/forms/d/e/1FAIpQLSfnfUlBuSP3oBlJkhbpAfwiVpITCMU7EZNnOPF2k9JvKAd6Gw/closedform</a> <br /> de la sección escolar de la SUAyED ambos en un horario de 9:00 a 14:00 horas. Sí continúas inscrito o inscrita deberás presentar la tira de materias validada y descargada del Sistema Integral de Administración Escolar (SIAE).
           en un horario de 9:00 a 18:00 horas si es egresado del sistema escolarizado.
         </li>
       </ol>

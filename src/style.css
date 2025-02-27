@@ -139,6 +139,7 @@ a {
 
 button {
   background-color: var(--amarillo);
+  cursor: pointer;
   padding: 1rem;
   text-align: left;
   margin: 2.5rem 0;
